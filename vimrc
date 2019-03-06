@@ -232,6 +232,22 @@ endif
 " Remove unused imports for Java
 autocmd FileType java autocmd BufWritePre * :UnusedImportsRemove
 
+" Language server for Java
+let s:java_language_server = expand('~/java-language-server/dist/mac/bin/launcher')
+if filereadable(s:java_language_server)
+  autocmd FileType java autocmd User lsp_setup call lsp#register_server({
+    \ 'name': 'java-language-server',
+    \ 'cmd': {server_info->[s:java_language_server, '--quiet']},
+    \ 'whitelist': ['java'],
+    \ })
+  autocmd FileType java nmap <C-e> <plug>(lsp-document-diagnostics)
+  autocmd FileType java nmap <C-i> <plug>(lsp-hover)
+  autocmd FileType java nmap <C-l> <plug>(lsp-definition)
+  autocmd FileType java nmap gr <plug>(lsp-references)
+  autocmd FileType java nmap go <plug>(lsp-document-symbol)
+  autocmd FileType java nmap gS <plug>(lsp-workspace-symbol)
+endif
+
 " ========= Shortcuts ========
 
 " NERDTree
