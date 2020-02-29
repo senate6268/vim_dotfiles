@@ -30,6 +30,7 @@ compiler ruby
 syntax on
 set hlsearch
 set number
+set relativenumber
 set showmatch
 set incsearch
 set background=dark
