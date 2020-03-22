@@ -7,7 +7,7 @@ Clone this project directy into `~/.vim`:
 rm -f ~/.vimrc ~/.gvimrc ~/.vimrc.bundles; rm -rf ~/.vim
 
 # Clone directly into ~/.vim
-git clone git@github.com:braintreeps/vim_dotfiles ~/.vim
+git clone git@github.com:petetomasik/vim_dotfiles ~/.vim
 ```
 
 After cloning this project, run `~/.vim/activate.sh`.
