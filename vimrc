@@ -106,7 +106,7 @@ let g:wstrip_highlight = 0
 autocmd FileType ruby,java,python,c,cpp,sql,puppet let b:wstrip_auto = 1
 
 autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
-autocmd FileType tex,gitcommit setlocal spell spelllang=en_us
+autocmd FileType tex setlocal spell spelllang=en_us
 
 " Status
 set laststatus=2
